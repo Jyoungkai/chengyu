@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>看图猜成语</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="game-shell">
+    <section class="topbar" aria-label="游戏状态">
+      <div>
+        <p class="eyebrow">看图猜成语</p>
+        <h1>第 <span id="levelNumber">1</span> 关</h1>
+      </div>
+      <div class="stats">
+        <span id="progressText">0/50</span>
+        <button id="resetButton" class="icon-button" type="button" title="重新开始" aria-label="重新开始">↻</button>
+      </div>
+    </section>
+
+    <section class="stage" aria-label="图片谜面">
+      <div id="picture" class="picture"></div>
+      <div id="answerSlots" class="answer-slots" aria-label="答案字数"></div>
+    </section>
+
+    <section class="play-panel" aria-label="答题区域">
+      <p id="message" class="message">观察图片，输入对应的四字成语。</p>
+      <label class="answer-box">
+        <span>答案</span>
+        <input id="answerInput" type="text" autocomplete="off" placeholder="请输入成语">
+      </label>
+      <div class="actions">
+        <button id="submitButton" class="primary" type="button">提交答案</button>
+        <button id="hintButton" type="button">提示</button>
+        <button id="nextButton" type="button">下一关</button>
+      </div>
+      <p id="hintText" class="hint" aria-live="polite"></p>
+    </section>
+
+    <section class="level-strip" aria-label="关卡选择">
+      <div id="levelGrid" class="level-grid"></div>
+    </section>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
